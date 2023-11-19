@@ -3,6 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const postRoute = require('../src/routes/postRoute');
 const userRoute = require('../src/routes/userRoutes');
+const proposalRoute = require('../src/routes/proposalRoute');
+const proposal = require('./models/Proposal');
 
 const connection = require('./database/connection')
 require('dotenv').config();
@@ -21,6 +23,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/jobaki/post', postRoute);
 app.use('/api/jobaki/user', userRoute);
+app.use('/api/jobaki/proposal', proposalRoute);
 
 const PORT = 5001 || process.env.PORT
 

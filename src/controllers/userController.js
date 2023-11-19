@@ -102,13 +102,13 @@ exports.login = async (req, res) => {
 
         console.log(email, senha);
 
-        console.log(scret) 
+        console.log(scret)
 
         const userlogin = await User.findOne({ status: true, senha: senha, email: email });
 
 
 
-  
+
         if (!userlogin) {
             res.status(400).send({
                 msg: 'Email ou senha inválidos'
