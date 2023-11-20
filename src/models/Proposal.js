@@ -31,6 +31,11 @@ const schema = new Schema({
         type: Boolean,
         required: true,
         default: true
+    },
+    confirmado: {
+        type: Boolean,
+        required: true,
+        default: false
     }
 
 
