@@ -7,7 +7,7 @@ const schema = new Schema({
     companyId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true
+        required: true 
     },
 
     status: {
@@ -20,7 +20,7 @@ const schema = new Schema({
         type: Date,
         required: true,
         default: Date.now
-    }
+    } 
 
 
 }, { strict: false });

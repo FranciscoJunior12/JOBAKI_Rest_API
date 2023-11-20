@@ -17,4 +17,4 @@ db.on('error', (err) => {
 db.once('open', () => {
     console.log('Conexão com o MongoDB estabelecida com sucesso.');
 });
-   
+   ;

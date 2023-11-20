@@ -17,6 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
+
 app.get('/', (req, res) => {
     res.json({ msg: "Hello World" })
 });
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
 app.use('/api/jobaki/post', postRoute);
 app.use('/api/jobaki/user', userRoute);
 app.use('/api/jobaki/proposal', proposalRoute);
+app.use('/api/jobaki/uploads', express.static('src/uploads'))
 
 const PORT = 5001 || process.env.PORT
 

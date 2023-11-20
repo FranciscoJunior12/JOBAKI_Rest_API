@@ -25,8 +25,12 @@ exports.get = (req, res) => {
 
 exports.post = (req, res, next) => {
 
+    // let newUser = new User(req.body);
+    const image = req.file.filename;
+
     let newUser = new User(req.body);
 
+    newUser.image = image;
 
     newUser.senha = md5(req.body.senha);
     newUser.save()
@@ -93,7 +97,7 @@ exports.login = async (req, res) => {
     console.log(senha)
     try {
 
-        if (!email || !senha) {
+        if (!email || !senha) { 
 
             return res.status(400).send({
                 msg: 'Por favor, preencha todos os campos.'
