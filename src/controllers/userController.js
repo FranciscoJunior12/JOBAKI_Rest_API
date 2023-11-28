@@ -26,11 +26,11 @@ exports.get = (req, res) => {
 exports.post = (req, res, next) => {
 
     // let newUser = new User(req.body);
-    const image = req.file.filename;
+    // const image = req.file.filename;
 
     let newUser = new User(req.body);
 
-    newUser.image = image;
+    // newUser.image = image;
 
     newUser.senha = md5(req.body.senha);
     newUser.save()
